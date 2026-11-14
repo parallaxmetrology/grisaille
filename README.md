@@ -35,6 +35,12 @@ python3 -m venv .venv
 
 ## Using it
 
+![The app in dark mode: a five-value plan squinted from the sunflower photo, four Underpaint variants ranked 72% to 45%, the third selected; its receipt flags values 4 and 5 merged and 8 of 23 shapes lost, with the repair box below](docs/images/app.jpg)
+
+*The page, with a five-value plan squinted from the sunflower photo and four Underpaint variants ranked by
+the receipt (72%, 68%, 48%, 45%). The third is selected: its receipt shows values 4 and 5 merged and 8 of
+23 shapes lost, and the repair box offers to put the lost shapes back.*
+
 1. **Value plan.** Draw with Brush/Fill and the value swatches (keys 1–5, B, F, Cmd-Z), or drop a
    picture onto the plan to squint it into values. The Squint slider sets how hard it squints.
 2. **Generate over it.** Three ways to hand the plan to the generator:
