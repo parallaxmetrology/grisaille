@@ -10,6 +10,8 @@ merged or swapped. Named for the grey underpainting that colour is laid over.
 Built November 2026. Runs locally: a small Python server drives the generator, and everything
 else (drawing, squint, receipt, repair masks) runs in the browser.
 
+![A three-value plan, the picture generated over it, the picture squinted, and the held map: pattern held on 93%, two dark bars lost where the generator painted a teapot and a jug](docs/images/receipt.jpg)
+
 ## Run it
 
 Needs Python 3.12, Node (for the tests only) and a GPU: Apple Silicon (MPS) or CUDA. Built and
@@ -66,6 +68,12 @@ python3 -m venv .venv
    through is repainted whole. The result is labelled *re-plan*, holds the new plan, and its receipt
    reads the picture against the new plan before and after. Frame and value count must stay the same.
 
+![Repair: an 'As depth' picture at 17% held with 5 of 9 shapes lost, repaired to 95% held with none lost](docs/images/repair.jpg)
+
+![Plan changes: one dark bar moved in the plan, and only that area repainted; pattern held against the new plan 91% before, 93% after](docs/images/plan-change.jpg)
+
+The figures are drawn from the runs in [`examples/`](examples/); the held maps use the page's own colours.
+
 ## What the first runs showed (13 Nov, one hand-drawn three-value plan)
 
 | run | pattern held | what the receipt said |
@@ -95,6 +103,7 @@ is **lost** when under half of it holds. Counts and L* differences, not grades.
 |---|---|
 | `index.html`, `css/app.css`, `js/app.js` | the page |
 | `examples/` | two saved pictures and a repair of each (see its README) |
+| `docs/images/` | the README figures |
 | `js/plan.js` | the plan: drawing, squinting a picture into values, changing value count |
 | `js/receipt.js` | the receipt |
 | `js/repair.js` | repair mask and value correction |
@@ -137,7 +146,7 @@ needs. **Everything that drifted** enforces the plan literally, including where 
 reading (one jug for two bars) was better than the plan. The receipt measures fidelity to the plan,
 not quality.
 
-## What plan changes did on the first tries (13 Nov)
+## What plan changes did on the first tries (13–14 Nov)
 
 One dark bar of a three-value plan moved sideways (4% of the plan changed), on underpaint pictures,
 seed 11. Scored against the new plan.
@@ -148,7 +157,7 @@ seed 11. Scored against the new plan.
 | 6 px, 0.8–0.95, 0.8 | 97% | seam stays; the new dark painted as a dark object with a hard outline |
 | 6 or 24 px, 0.95–1.0, 0.3–0.4 | 94–95% (one shape lost at 0.3) | the new dark breaks into blue and yellow streaks |
 | 24 px, 0.8–0.95, 0.8 | 96% | jug repainted whole, no seam; the new dark is a dark object with a shadow |
-| 24 px, 0.9, 0.8 (shipped), second picture | 91% → 93% | a dark post painted behind the teapot, with shadow; the rest unchanged. The one shape still lost is the other dark bar, already lost (25% held) before the change; it was not edited, so it was not repainted (Lost shapes repair is the tool for it) |
+| 24 px, 0.9, 0.8 (shipped), second picture (re-run cleanly on 14 Nov for `examples/`, same result) | 91% → 93% | a dark post painted behind the teapot, with shadow; the rest unchanged. The one shape still lost is the other dark bar, already lost (25% held) before the change; it was not edited, so it was not repainted (Lost shapes repair is the tool for it) |
 
 The 6 px repair edge cut the jug because the moved bar had been part of it. The wider edge costs about
 one point of pattern held and keeps the picture whole. Generating from scratch over the edited plan
@@ -185,6 +194,6 @@ See [CITATION.cff](CITATION.cff), or use GitHub's "Cite this repository" button.
 
 ## Licence
 
-Code: MIT (see [LICENSE](LICENSE)). README and example images: CC BY 4.0 (see
+Code: MIT (see [LICENSE](LICENSE)). README, figures and example images: CC BY 4.0 (see
 [LICENSE-CONTENT](LICENSE-CONTENT)). The models it downloads are not part of this repository and are
 used under their own licences, including the use restrictions of CreativeML OpenRAIL-M.

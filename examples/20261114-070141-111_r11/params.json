@@ -11,7 +11,7 @@
   "target": "plan change",
   "width": 512,
   "height": 512,
-  "seconds": 20.3,
+  "seconds": 85.2,
   "device": "mps",
   "sd": "stable-diffusion-v1-5/stable-diffusion-v1-5",
   "controlnet": "lllyasviel/control_v11f1e_sd15_tile",

@@ -2,36 +2,38 @@
   "summary": "Pattern held on 93% of the picture. Exact values on 94%. Darker overall by 3.3 L*. Value range compressed to 85% of the plan's. 1 of 9 shapes lost.",
   "label": "re-plan of underpaint \u00b7 s11",
   "parent": "20261113-083638-588_s11",
-  "parent_held_pattern": 0.912,
+  "parent_held_pattern": 0.909,
   "repair_target": "plan change",
   "W": 512,
   "H": 512,
   "steps": 3,
-  "heldPattern": 0.932,
+  "heldPattern": 0.933,
   "heldExact": 0.942,
   "keyShift": -3.3,
-  "contrast": 0.847,
+  "meanL": 52.90004842005874,
+  "planMean": 56.24652099609375,
+  "contrast": 0.854,
   "fittedL": [
-    18,
+    17.7,
     49.3,
-    79.8
+    80
   ],
   "values": [
     {
       "k": 0,
       "planL": 15,
       "area": 0.039,
-      "meanL": 29.3,
-      "sd": 15.7,
-      "held": 0.576
+      "meanL": 28.2,
+      "sd": 15,
+      "held": 0.622
     },
     {
       "k": 1,
       "planL": 52,
-      "area": 0.803,
+      "area": 0.802,
       "meanL": 48.2,
       "sd": 7.7,
-      "held": 0.937
+      "held": 0.936
     },
     {
       "k": 2,
@@ -47,7 +49,7 @@
       "lo": 0,
       "hi": 1,
       "planGap": 37,
-      "gap": 18.9,
+      "gap": 20.1,
       "state": "apart"
     },
     {
@@ -62,8 +64,8 @@
     {
       "id": 1,
       "k": 1,
-      "area": 0.659,
-      "cx": 259,
+      "area": 0.658,
+      "cx": 260,
       "cy": 334,
       "box": [
         0,
@@ -71,7 +73,7 @@
         511,
         511
       ],
-      "held": 0.944,
+      "held": 0.943,
       "meanL": 47.3,
       "lost": false
     },
@@ -174,6 +176,22 @@
     {
       "id": 8,
       "k": 0,
+      "area": 0.021,
+      "cx": 130,
+      "cy": 323,
+      "box": [
+        114,
+        231,
+        146,
+        414
+      ],
+      "held": 0.979,
+      "meanL": 15.8,
+      "lost": false
+    },
+    {
+      "id": 9,
+      "k": 0,
       "area": 0.018,
       "cx": 233,
       "cy": 322,
@@ -183,25 +201,9 @@
         247,
         413
       ],
-      "held": 0.212,
+      "held": 0.206,
       "meanL": 42.6,
       "lost": true
-    },
-    {
-      "id": 9,
-      "k": 0,
-      "area": 0.018,
-      "cx": 130,
-      "cy": 325,
-      "box": [
-        116,
-        236,
-        144,
-        414
-      ],
-      "held": 0.981,
-      "meanL": 14.5,
-      "lost": false
     }
   ],
   "lostShapes": 1,
