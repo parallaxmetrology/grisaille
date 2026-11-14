@@ -12,6 +12,8 @@ else (drawing, squint, receipt, repair masks) runs in the browser.
 
 ![A three-value plan, the picture generated over it, the picture squinted, and the held map: pattern held on 93%, two dark bars lost where the generator painted a teapot and a jug](docs/images/receipt.jpg)
 
+![A sunflower photo squinted into a three-value plan, the best of four Tile variants generated over it, and its held map: 91% held, no shapes lost](docs/images/photo.jpg)
+
 ## Run it
 
 Needs Python 3.12, Node (for the tests only) and a GPU: Apple Silicon (MPS) or CUDA. Built and
@@ -185,6 +187,10 @@ on both endpoints (`server/models.py`, `FAST_STEPS`, `FAST_GUIDANCE`) if it is w
 - SD 1.5 at 512–768 px. Prompts steer subject and colour; the plan steers values and shapes.
 - The tile ControlNet ships only as a `.bin` (pickle) file from lllyasviel's official repo; diffusers
   loads it with a warning.
+- **Underpaint starts from the grey plan**, so its colour comes from the prompt alone. Over the
+  sunflower photo's plan it painted grey, white or blue petals (eight variants, two prompts, 77–90%
+  held); Tile, which starts from noise, kept yellow petals and green leaves (88–91%). For a plan
+  squinted from a colour photo, try Tile first.
 - One job at a time. A second open copy of the page generates too: each Generate click in each copy
   is its own run.
 

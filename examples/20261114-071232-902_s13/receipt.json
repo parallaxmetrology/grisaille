@@ -1,0 +1,340 @@
+{
+  "summary": "Pattern held on 91% of the picture. Exact values on 78%. Darker overall by 5.4 L*. Value range compressed to 62% of the plan's. 0 of 17 shapes lost.",
+  "label": "tile \u00b7 s13",
+  "W": 512,
+  "H": 640,
+  "steps": 3,
+  "heldPattern": 0.911,
+  "heldExact": 0.775,
+  "keyShift": -5.4,
+  "meanL": 53.35060496527585,
+  "planMean": 58.78049621598789,
+  "contrast": 0.618,
+  "fittedL": [
+    35.1,
+    53.9,
+    69
+  ],
+  "values": [
+    {
+      "k": 0,
+      "planL": 29.3,
+      "area": 0.362,
+      "meanL": 35.2,
+      "sd": 7,
+      "held": 0.938
+    },
+    {
+      "k": 1,
+      "planL": 59.6,
+      "area": 0.223,
+      "meanL": 53.5,
+      "sd": 7.1,
+      "held": 0.872
+    },
+    {
+      "k": 2,
+      "planL": 84.1,
+      "area": 0.415,
+      "meanL": 69.1,
+      "sd": 8.1,
+      "held": 0.907
+    }
+  ],
+  "pairs": [
+    {
+      "lo": 0,
+      "hi": 1,
+      "planGap": 30.3,
+      "gap": 18.2,
+      "state": "apart"
+    },
+    {
+      "lo": 1,
+      "hi": 2,
+      "planGap": 24.5,
+      "gap": 15.7,
+      "state": "apart"
+    }
+  ],
+  "shapes": [
+    {
+      "id": 1,
+      "k": 2,
+      "area": 0.394,
+      "cx": 258,
+      "cy": 176,
+      "box": [
+        0,
+        0,
+        511,
+        472
+      ],
+      "held": 0.918,
+      "meanL": 69.5,
+      "lost": false
+    },
+    {
+      "id": 2,
+      "k": 1,
+      "area": 0.169,
+      "cx": 294,
+      "cy": 458,
+      "box": [
+        158,
+        292,
+        447,
+        635
+      ],
+      "held": 0.89,
+      "meanL": 54.7,
+      "lost": false
+    },
+    {
+      "id": 3,
+      "k": 0,
+      "area": 0.167,
+      "cx": 296,
+      "cy": 552,
+      "box": [
+        0,
+        367,
+        511,
+        639
+      ],
+      "held": 0.968,
+      "meanL": 33.2,
+      "lost": false
+    },
+    {
+      "id": 4,
+      "k": 0,
+      "area": 0.063,
+      "cx": 133,
+      "cy": 209,
+      "box": [
+        0,
+        120,
+        257,
+        287
+      ],
+      "held": 0.959,
+      "meanL": 37.7,
+      "lost": false
+    },
+    {
+      "id": 5,
+      "k": 0,
+      "area": 0.03,
+      "cx": 302,
+      "cy": 445,
+      "box": [
+        250,
+        387,
+        352,
+        504
+      ],
+      "held": 0.975,
+      "meanL": 28,
+      "lost": false
+    },
+    {
+      "id": 6,
+      "k": 0,
+      "area": 0.022,
+      "cx": 53,
+      "cy": 398,
+      "box": [
+        0,
+        349,
+        120,
+        458
+      ],
+      "held": 0.91,
+      "meanL": 39,
+      "lost": false
+    },
+    {
+      "id": 7,
+      "k": 0,
+      "area": 0.019,
+      "cx": 159,
+      "cy": 332,
+      "box": [
+        114,
+        279,
+        198,
+        399
+      ],
+      "held": 0.919,
+      "meanL": 37.8,
+      "lost": false
+    },
+    {
+      "id": 8,
+      "k": 0,
+      "area": 0.017,
+      "cx": 445,
+      "cy": 326,
+      "box": [
+        400,
+        284,
+        495,
+        373
+      ],
+      "held": 0.989,
+      "meanL": 35.4,
+      "lost": false
+    },
+    {
+      "id": 9,
+      "k": 1,
+      "area": 0.017,
+      "cx": 54,
+      "cy": 478,
+      "box": [
+        0,
+        422,
+        123,
+        557
+      ],
+      "held": 0.8,
+      "meanL": 47.7,
+      "lost": false
+    },
+    {
+      "id": 10,
+      "k": 2,
+      "area": 0.015,
+      "cx": 24,
+      "cy": 542,
+      "box": [
+        0,
+        471,
+        61,
+        631
+      ],
+      "held": 0.813,
+      "meanL": 63.5,
+      "lost": false
+    },
+    {
+      "id": 11,
+      "k": 0,
+      "area": 0.015,
+      "cx": 268,
+      "cy": 288,
+      "box": [
+        213,
+        259,
+        346,
+        319
+      ],
+      "held": 0.93,
+      "meanL": 36.7,
+      "lost": false
+    },
+    {
+      "id": 12,
+      "k": 1,
+      "area": 0.012,
+      "cx": 81,
+      "cy": 104,
+      "box": [
+        28,
+        57,
+        138,
+        160
+      ],
+      "held": 0.846,
+      "meanL": 48.9,
+      "lost": false
+    },
+    {
+      "id": 13,
+      "k": 1,
+      "area": 0.011,
+      "cx": 467,
+      "cy": 19,
+      "box": [
+        393,
+        0,
+        511,
+        62
+      ],
+      "held": 0.942,
+      "meanL": 51.4,
+      "lost": false
+    },
+    {
+      "id": 14,
+      "k": 1,
+      "area": 0.01,
+      "cx": 474,
+      "cy": 194,
+      "box": [
+        441,
+        160,
+        511,
+        244
+      ],
+      "held": 0.949,
+      "meanL": 47.8,
+      "lost": false
+    },
+    {
+      "id": 15,
+      "k": 0,
+      "area": 0.008,
+      "cx": 493,
+      "cy": 231,
+      "box": [
+        469,
+        197,
+        511,
+        276
+      ],
+      "held": 0.847,
+      "meanL": 37.6,
+      "lost": false
+    },
+    {
+      "id": 16,
+      "k": 0,
+      "area": 0.007,
+      "cx": 165,
+      "cy": 67,
+      "box": [
+        135,
+        44,
+        195,
+        91
+      ],
+      "held": 0.879,
+      "meanL": 44.6,
+      "lost": false
+    },
+    {
+      "id": 17,
+      "k": 0,
+      "area": 0.006,
+      "cx": 88,
+      "cy": 117,
+      "box": [
+        65,
+        93,
+        116,
+        140
+      ],
+      "held": 0.883,
+      "meanL": 44.8,
+      "lost": false
+    }
+  ],
+  "lostShapes": 0,
+  "rules": {
+    "merge_lstar": 3,
+    "shape_min_frac": 0.005,
+    "lost_below": 0.5
+  }
+}

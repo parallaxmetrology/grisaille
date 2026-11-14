@@ -1,0 +1,23 @@
+{
+  "prompt": "an oil painting of yellow sunflowers with green leaves against a pale blue sky, seen from below, painterly brushwork",
+  "mode": "tile",
+  "strength": 1.0,
+  "control": 0.6,
+  "seed": 13,
+  "steps": 25,
+  "guidance": 7.0,
+  "invert_depth": false,
+  "fast": false,
+  "width": 512,
+  "height": 640,
+  "seconds": 29.1,
+  "device": "mps",
+  "sd": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "controlnet": "lllyasviel/control_v11f1e_sd15_tile",
+  "plan_steps": 3,
+  "plan_centers": [
+    29.3,
+    59.6,
+    84.1
+  ]
+}
