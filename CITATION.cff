@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use Grisaille in research, please cite it as below."
+title: "Grisaille: plan the values, generate over them, read what held"
+type: software
+authors:
+  - family-names: Parrish
+    given-names: Russell
+    orcid: https://orcid.org/0009-0008-9781-7995
+version: "0.1.0"
+date-released: 2026-11-14
+license: MIT
+url: https://www.parallaxmetrology.com
+repository-code: https://github.com/parallaxmetrology/grisaille
+keywords: [value plan, notan, painting, controlnet, stable diffusion, inpainting, receipt, image analysis]
+abstract: >
+  A painter's value plan (2, 3 or 5 values) is handed to Stable Diffusion 1.5 with ControlNet 1.1,
+  and the picture is read back against the plan: pattern held after one global key and contrast fit,
+  exact values held, merged or swapped values, and lost shapes. Variants are ranked by that receipt,
+  lost shapes can be repaired in place, and an edited plan can be repainted only where it changed.

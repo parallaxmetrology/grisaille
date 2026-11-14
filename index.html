@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grisaille</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header>
+  <h1>Grisaille</h1>
+  <p class="sub">Plan the values. Generate over them. Read what held.</p>
+  <span id="server" class="pill">checking server…</span>
+</header>
+
+<main>
+  <!-- ── 1. the plan ── -->
+  <section id="planCard" class="card">
+    <div class="cardhead"><h2>1 · Value plan</h2>
+      <div class="seg" id="steps"><button data-v="2">2</button><button data-v="3" class="on">3</button><button data-v="5">5</button></div>
+    </div>
+    <div class="row">
+      <div class="seg" id="tool"><button data-v="brush" class="on">Brush</button><button data-v="fill">Fill</button></div>
+      <div id="swatches" class="swatches"></div>
+    </div>
+    <div class="row">
+      <label class="grow">Size <input id="size" type="range" min="4" max="80" value="28"></label>
+      <select id="aspect" title="Frame">
+        <option value="512x512">Square</option><option value="512x640">4:5 upright</option>
+        <option value="640x512">5:4 wide</option><option value="512x768">2:3 upright</option><option value="768x512">3:2 wide</option>
+      </select>
+    </div>
+    <div id="planWrap" class="canvaswrap"><canvas id="plan"></canvas><div id="dropHint">Drop a picture or thumbnail to squint it into a plan</div></div>
+    <div class="row">
+      <label class="btn">From picture…<input id="planFile" type="file" accept="image/*" hidden></label>
+      <button id="undo" class="btn">Undo</button>
+      <button id="clear" class="btn">Clear</button>
+    </div>
+    <div class="row" id="squintRow" hidden>
+      <label class="grow">Squint <input id="squint" type="range" min="0" max="1" step="0.05" value="0.5"></label>
+      <span class="dim small" id="planNote"></span>
+    </div>
+  </section>
+
+  <!-- ── 2. generate ── -->
+  <section id="genCard" class="card">
+    <div class="cardhead"><h2>2 · Generate over it</h2></div>
+    <textarea id="prompt" rows="3" placeholder="What to paint over the plan">a still life painting of a jug on a table by a window, oil on canvas</textarea>
+    <div class="seg wide" id="mode">
+      <button data-v="underpaint" class="on">Underpaint</button><button data-v="tile">Tile</button><button data-v="depth">As depth</button>
+    </div>
+    <p class="dim small" id="modeNote"></p>
+    <label id="strengthRow">Repaint <span id="strengthV"></span><input id="strength" type="range" min="0.5" max="1" step="0.01"></label>
+    <label>Hold <span id="controlV"></span><input id="control" type="range" min="0" max="1.5" step="0.05"></label>
+    <label id="invertRow" hidden><input id="invert" type="checkbox"> Lights are near (default: darks are near)</label>
+    <div class="row">
+      <label>Seed <input id="seed" type="number" value="11" min="0" max="999999"></label>
+      <button id="reseed" class="btn">New seed</button>
+      <label>Variants <select id="variants"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>6</option><option>8</option></select></label>
+    </div>
+    <button id="go" class="primary">Generate</button>
+    <div id="progress" class="progress" hidden><div></div></div>
+    <p class="dim small" id="genNote"></p>
+  </section>
+
+  <!-- ── 3. picture ── -->
+  <section id="picCard" class="card">
+    <div class="cardhead"><h2>3 · Picture</h2>
+      <div class="seg" id="view"><button data-v="pic" class="on">Picture</button><button data-v="squint">Squinted</button><button data-v="held">Held map</button><button data-v="plan">Plan</button></div>
+    </div>
+    <div class="canvaswrap"><canvas id="pic"></canvas><div id="picEmpty">Results appear here. You can also read your own painting against the plan.</div></div>
+    <div id="legend" class="legend" hidden>
+      <span><i style="background:var(--d2)"></i>2+ darker</span><span><i style="background:var(--d1)"></i>1 darker</span>
+      <span><i style="background:var(--held)"></i>held</span><span><i style="background:var(--l1)"></i>1 lighter</span><span><i style="background:var(--l2)"></i>2+ lighter</span>
+    </div>
+    <div id="strip" class="strip"></div>
+    <label class="btn">Read my own picture…<input id="ownFile" type="file" accept="image/*" hidden></label>
+  </section>
+
+  <!-- ── 4. receipt ── -->
+  <section id="recCard" class="card">
+    <div class="cardhead"><h2>4 · Receipt</h2></div>
+    <p id="summary" class="summary dim">No picture read yet.</p>
+    <div id="stats" class="stats"></div>
+    <table id="values"></table>
+    <div id="pairs"></div>
+    <h3 id="shapesHead" hidden>Shapes</h3>
+    <ol id="shapes"></ol>
+    <div id="repairBox" class="repair" hidden>
+      <h3>Repair</h3>
+      <div class="row">
+        <select id="repairTarget"><option value="lost">Lost shapes</option><option value="drift">Everything that drifted</option><option value="shape">Selected shape</option><option value="changes">Plan changes</option></select>
+        <label class="grow">Repaint <span id="repStrV">0.60</span><input id="repStr" type="range" min="0.3" max="0.9" step="0.05" value="0.6"></label>
+      </div>
+      <button id="repairGo" class="primary">Repair this picture</button>
+      <p class="dim small" id="repairNote"></p>
+    </div>
+    <details class="small dim"><summary>How this is read</summary>
+      <p>The picture is squinted exactly as the plan was (CIE L*, Kuwahara flattening), then each pixel is
+      compared with the plan. <b>Exact</b>: it falls in the plan's own value band. <b>Pattern</b>: it falls in the right
+      band after one global key and contrast adjustment fitted to the whole picture, so a picture that went lighter,
+      darker or flatter overall can still hold the pattern; the key shift and contrast are reported beside it.
+      Neighbouring values closer than 3 L* in the picture read as <b>merged</b>. A plan shape is <b>lost</b> when under
+      half of it holds its value. These are counts of pixels and differences in L*, not grades.</p>
+      <p><b>Repair</b> pushes the lightness of the chosen area back to the plan (as the picture's own key and contrast
+      put it), keeps the colour, then repaints only that area with the generator held to the corrected picture.
+      Outside the area nothing changes. The repaired picture gets its own receipt.</p>
+      <p><b>Plan changes</b>: with a picture selected, edit the plan in card 1 (move a dark, widen a band, merge two
+      values). Only the pixels you changed get their lightness moved to the new plan, and only they and a 24 px edge
+      are repainted, so an object the change cuts through is repainted whole. The receipt reads the picture against the new plan before and after.</p>
+    </details>
+    <p class="dim small" id="saved"></p>
+  </section>
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

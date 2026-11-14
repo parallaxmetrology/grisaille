@@ -1,0 +1,24 @@
+{
+  "prompt": "a still life painting of a jug on a table by a window, oil on canvas",
+  "strength": 0.6,
+  "control": 0.8,
+  "seed": 11,
+  "steps": 25,
+  "guidance": 7.0,
+  "fast": false,
+  "kind": "repair",
+  "parent": null,
+  "target": "lost",
+  "width": 512,
+  "height": 512,
+  "seconds": 14.5,
+  "device": "mps",
+  "sd": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "controlnet": "lllyasviel/control_v11f1e_sd15_tile",
+  "plan_steps": 3,
+  "plan_centers": [
+    15,
+    52,
+    88
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "summary": "Pattern held on 17% of the picture. exact values on 56%. darker overall by 10.4 L*. value range compressed to 21% of the plan's. values 1 and 2 merged. 5 of 9 shapes lost.",
+  "label": "depth \u00b7 s11",
+  "W": 512,
+  "H": 512,
+  "steps": 3,
+  "heldPattern": 0.17,
+  "heldExact": 0.557,
+  "keyShift": -10.4,
+  "contrast": 0.207,
+  "fittedL": [
+    37.4,
+    45.1,
+    52.5
+  ],
+  "values": [
+    {
+      "k": 0,
+      "planL": 15,
+      "area": 0.036,
+      "meanL": 42.4,
+      "sd": 11.5,
+      "held": 0.514
+    },
+    {
+      "k": 1,
+      "planL": 52,
+      "area": 0.805,
+      "meanL": 44.6,
+      "sd": 12.9,
+      "held": 0.05
+    },
+    {
+      "k": 2,
+      "planL": 88,
+      "area": 0.158,
+      "meanL": 53.7,
+      "sd": 9.7,
+      "held": 0.7
+    }
+  ],
+  "pairs": [
+    {
+      "lo": 0,
+      "hi": 1,
+      "planGap": 37,
+      "gap": 2.3,
+      "state": "merged"
+    },
+    {
+      "lo": 1,
+      "hi": 2,
+      "planGap": 36,
+      "gap": 9.1,
+      "state": "apart"
+    }
+  ],
+  "shapes": [
+    {
+      "id": 1,
+      "k": 1,
+      "area": 0.661,
+      "cx": 256,
+      "cy": 334,
+      "box": [
+        0,
+        154,
+        511,
+        511
+      ],
+      "held": 0.051,
+      "meanL": 45,
+      "lost": true
+    },
+    {
+      "id": 2,
+      "k": 2,
+      "area": 0.053,
+      "cx": 256,
+      "cy": 34,
+      "box": [
+        0,
+        20,
+        511,
+        48
+      ],
+      "held": 0.93,
+      "meanL": 58.4,
+      "lost": false
+    },
+    {
+      "id": 3,
+      "k": 2,
+      "area": 0.053,
+      "cx": 256,
+      "cy": 87,
+      "box": [
+        0,
+        73,
+        511,
+        101
+      ],
+      "held": 0.924,
+      "meanL": 56.3,
+      "lost": false
+    },
+    {
+      "id": 4,
+      "k": 2,
+      "area": 0.053,
+      "cx": 256,
+      "cy": 141,
+      "box": [
+        0,
+        127,
+        511,
+        155
+      ],
+      "held": 0.245,
+      "meanL": 46.5,
+      "lost": true
+    },
+    {
+      "id": 5,
+      "k": 1,
+      "area": 0.053,
+      "cx": 255,
+      "cy": 114,
+      "box": [
+        0,
+        100,
+        511,
+        128
+      ],
+      "held": 0.021,
+      "meanL": 44.7,
+      "lost": true
+    },
+    {
+      "id": 6,
+      "k": 1,
+      "area": 0.051,
+      "cx": 255,
+      "cy": 61,
+      "box": [
+        0,
+        47,
+        511,
+        74
+      ],
+      "held": 0.107,
+      "meanL": 48.7,
+      "lost": true
+    },
+    {
+      "id": 7,
+      "k": 1,
+      "area": 0.041,
+      "cx": 255,
+      "cy": 10,
+      "box": [
+        0,
+        0,
+        511,
+        21
+      ],
+      "held": 0,
+      "meanL": 34.4,
+      "lost": true
+    },
+    {
+      "id": 8,
+      "k": 0,
+      "area": 0.018,
+      "cx": 233,
+      "cy": 322,
+      "box": [
+        219,
+        232,
+        247,
+        413
+      ],
+      "held": 0.515,
+      "meanL": 42.9,
+      "lost": false
+    },
+    {
+      "id": 9,
+      "k": 0,
+      "area": 0.018,
+      "cx": 271,
+      "cy": 322,
+      "box": [
+        257,
+        232,
+        285,
+        413
+      ],
+      "held": 0.513,
+      "meanL": 41.9,
+      "lost": false
+    }
+  ],
+  "lostShapes": 5,
+  "rules": {
+    "merge_lstar": 3,
+    "shape_min_frac": 0.005,
+    "lost_below": 0.5
+  }
+}

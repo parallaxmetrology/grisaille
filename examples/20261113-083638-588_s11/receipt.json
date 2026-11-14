@@ -1,0 +1,213 @@
+{
+  "summary": "Pattern held on 93% of the picture. Exact values on 94%. Darker overall by 2.9 L*. Value range compressed to 79% of the plan's. 2 of 9 shapes lost.",
+  "label": "underpaint \u00b7 s11",
+  "parent": null,
+  "parent_held_pattern": null,
+  "repair_target": null,
+  "W": 512,
+  "H": 512,
+  "steps": 3,
+  "heldPattern": 0.929,
+  "heldExact": 0.938,
+  "keyShift": -2.9,
+  "contrast": 0.79,
+  "fittedL": [
+    20.8,
+    50,
+    78.4
+  ],
+  "values": [
+    {
+      "k": 0,
+      "planL": 15,
+      "area": 0.039,
+      "meanL": 37.6,
+      "sd": 11.9,
+      "held": 0.351
+    },
+    {
+      "k": 1,
+      "planL": 52,
+      "area": 0.802,
+      "meanL": 48.3,
+      "sd": 7.2,
+      "held": 0.945
+    },
+    {
+      "k": 2,
+      "planL": 88,
+      "area": 0.158,
+      "meanL": 82.7,
+      "sd": 3.3,
+      "held": 0.991
+    }
+  ],
+  "pairs": [
+    {
+      "lo": 0,
+      "hi": 1,
+      "planGap": 37,
+      "gap": 10.7,
+      "state": "apart"
+    },
+    {
+      "lo": 1,
+      "hi": 2,
+      "planGap": 36,
+      "gap": 34.4,
+      "state": "apart"
+    }
+  ],
+  "shapes": [
+    {
+      "id": 1,
+      "k": 1,
+      "area": 0.658,
+      "cx": 251,
+      "cy": 334,
+      "box": [
+        0,
+        154,
+        511,
+        511
+      ],
+      "held": 0.953,
+      "meanL": 47.4,
+      "lost": false
+    },
+    {
+      "id": 2,
+      "k": 2,
+      "area": 0.053,
+      "cx": 256,
+      "cy": 34,
+      "box": [
+        0,
+        20,
+        511,
+        48
+      ],
+      "held": 1,
+      "meanL": 82.3,
+      "lost": false
+    },
+    {
+      "id": 3,
+      "k": 2,
+      "area": 0.053,
+      "cx": 256,
+      "cy": 87,
+      "box": [
+        0,
+        73,
+        511,
+        101
+      ],
+      "held": 0.999,
+      "meanL": 82.7,
+      "lost": false
+    },
+    {
+      "id": 4,
+      "k": 2,
+      "area": 0.053,
+      "cx": 256,
+      "cy": 141,
+      "box": [
+        0,
+        127,
+        511,
+        155
+      ],
+      "held": 0.973,
+      "meanL": 83,
+      "lost": false
+    },
+    {
+      "id": 5,
+      "k": 1,
+      "area": 0.053,
+      "cx": 255,
+      "cy": 114,
+      "box": [
+        0,
+        100,
+        511,
+        128
+      ],
+      "held": 0.912,
+      "meanL": 53.1,
+      "lost": false
+    },
+    {
+      "id": 6,
+      "k": 1,
+      "area": 0.051,
+      "cx": 255,
+      "cy": 61,
+      "box": [
+        0,
+        47,
+        511,
+        74
+      ],
+      "held": 0.93,
+      "meanL": 52,
+      "lost": false
+    },
+    {
+      "id": 7,
+      "k": 1,
+      "area": 0.041,
+      "cx": 255,
+      "cy": 10,
+      "box": [
+        0,
+        0,
+        511,
+        21
+      ],
+      "held": 0.869,
+      "meanL": 52.3,
+      "lost": false
+    },
+    {
+      "id": 8,
+      "k": 0,
+      "area": 0.021,
+      "cx": 400,
+      "cy": 323,
+      "box": [
+        384,
+        231,
+        416,
+        414
+      ],
+      "held": 0.44,
+      "meanL": 33.3,
+      "lost": true
+    },
+    {
+      "id": 9,
+      "k": 0,
+      "area": 0.018,
+      "cx": 233,
+      "cy": 322,
+      "box": [
+        219,
+        232,
+        247,
+        413
+      ],
+      "held": 0.246,
+      "meanL": 42.6,
+      "lost": true
+    }
+  ],
+  "lostShapes": 2,
+  "rules": {
+    "merge_lstar": 3,
+    "shape_min_frac": 0.005,
+    "lost_below": 0.5
+  }
+}
